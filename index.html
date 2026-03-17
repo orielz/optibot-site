@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OptiBot — Continuous Repository Optimization for GitHub</title>
+  <meta name="description" content="OptiBot automatically optimizes your repositories — CI pipelines, build tools, dependencies, and dev experience. Validates every fix, opens PRs only after proving improvement. Every day, at every scale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="logo">
+        <span class="logo-icon">&#9889;</span> OptiBot
+      </a>
+      <div class="nav-links">
+        <a href="#how-it-works">How it works</a>
+        <a href="#optimizations">Optimizations</a>
+        <a href="#install" class="btn btn-sm">Install on GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">GitHub App</div>
+      <h1>Your repos are burning money right now.<br><span class="gradient-text">OptiBot cuts the waste. Every single day.</span></h1>
+      <p class="hero-sub">
+        OptiBot scans your repositories daily &mdash; CI pipelines, build tools, dependencies, and developer experience &mdash;
+        finds what's costing you time and money, validates the fix through real experiments,
+        and opens a pull request <strong>only after proving measurable savings</strong>.
+        Tomorrow it does it again.
+      </p>
+      <div class="hero-cta">
+        <a href="#install" class="btn btn-lg">Install OptiBot</a>
+        <a href="#how-it-works" class="btn btn-lg btn-outline">See how it works</a>
+      </div>
+      <p class="hero-note">Free for open-source. No configuration required.</p>
+    </div>
+  </section>
+
+  <!-- Trust bar -->
+  <section class="trust-bar">
+    <div class="container">
+      <div class="trust-items">
+        <div class="trust-item">
+          <span class="trust-icon">&#128176;</span>
+          <span>Reduces costs daily</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">&#9989;</span>
+          <span>PRs only after verified savings</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">&#128736;</span>
+          <span>Zero configuration needed</span>
+        </div>
+        <div class="trust-item">
+          <span class="trust-icon">&#128260;</span>
+          <span>Runs every day, at any scale</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Problem -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Your repos are silently burning time and money</h2>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <div class="problem-number">1</div>
+          <h3>Slow CI pipelines</h3>
+          <p>Missing caches, redundant runs, no concurrency control. Every build wastes minutes that add up to hours every week.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">2</div>
+          <h3>Outdated build tools</h3>
+          <p>Running webpack 4 when v5 is 40% faster? Using an old bundler when a drop-in upgrade exists? Nobody has time to check.</p>
+        </div>
+        <div class="problem-card">
+          <div class="problem-number">3</div>
+          <h3>Cost creep at scale</h3>
+          <p>Across dozens of repos, small inefficiencies compound into thousands in wasted compute. No one tracks it &mdash; until the bill arrives.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How it works -->
+  <section id="how-it-works" class="section">
+    <div class="container">
+      <h2 class="section-title">A closed-loop optimization engine</h2>
+      <p class="section-sub">OptiBot doesn't just suggest changes. It runs a full experiment and proves the improvement before opening a PR.</p>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <div class="step-content">
+            <h3>Detect</h3>
+            <p>Daily scans analyze your CI workflows, build configurations, dependencies, and tooling to find optimization opportunities across every repo.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <div class="step-content">
+            <h3>Patch</h3>
+            <p>A candidate branch is created with the optimized configuration. No checkout needed &mdash; changes are applied via the GitHub API.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <div class="step-content">
+            <h3>Validate</h3>
+            <p>The change is tested through controlled experiments. Results are compared against real baselines to verify the improvement holds up.</p>
+          </div>
+        </div>
+        <div class="step-connector"></div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <h3>Open PR</h3>
+            <p>Only if the improvement passes the threshold &mdash; a transparent PR is opened with full validation data, measured results, and rollback guidance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Optimizations -->
+  <section id="optimizations" class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Optimizations across every layer</h2>
+      <p class="section-sub">From CI pipelines to build tools to local dev experience &mdash; OptiBot finds what's slow and makes it faster.</p>
+
+      <div class="opt-category">
+        <h3 class="opt-category-title">CI Pipeline</h3>
+        <div class="opt-grid">
+          <div class="opt-card">
+            <div class="opt-icon">&#128230;</div>
+            <h3>Dependency caching</h3>
+            <p>Adds caching for npm, yarn, pnpm, pip, bundler, maven, and gradle. Stops reinstalling the same packages every build.</p>
+            <div class="opt-meta">
+              <span class="tag tag-green">Low risk</span>
+              <span class="tag tag-blue">Measured: &ge;10% faster</span>
+            </div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-icon">&#128260;</div>
+            <h3>Concurrency cancellation</h3>
+            <p>Cancels outdated CI runs when new commits land on the same branch. No more wasted compute on stale code.</p>
+            <div class="opt-meta">
+              <span class="tag tag-green">Low risk</span>
+              <span class="tag tag-purple">Structural validation</span>
+            </div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-icon">&#127919;</div>
+            <h3>Trigger narrowing</h3>
+            <p>Adds path filters so CI skips docs-only and non-code changes. Conservative safe-path list &mdash; nothing breaks.</p>
+            <div class="opt-meta">
+              <span class="tag tag-yellow">Medium risk</span>
+              <span class="tag tag-purple">Structural validation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="opt-category">
+        <h3 class="opt-category-title">Build Tools & Dev Experience</h3>
+        <div class="opt-grid">
+          <div class="opt-card">
+            <div class="opt-icon">&#9889;</div>
+            <h3>Build tool upgrades</h3>
+            <p>Detects outdated bundlers and build tools &mdash; webpack, esbuild, Vite, Turbopack &mdash; and proposes verified upgrades that speed up both CI and local dev.</p>
+            <div class="opt-meta">
+              <span class="tag tag-yellow">Medium risk</span>
+              <span class="tag tag-blue">Measured improvement</span>
+            </div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-icon">&#128176;</div>
+            <h3>Cost reduction</h3>
+            <p>Tracks compute spend across all your repos daily. Identifies the biggest cost drivers and eliminates waste at scale &mdash; one verified PR at a time.</p>
+            <div class="opt-meta">
+              <span class="tag tag-green">Low risk</span>
+              <span class="tag tag-blue">Measured savings</span>
+            </div>
+          </div>
+          <div class="opt-card">
+            <div class="opt-icon">&#128295;</div>
+            <h3>Dependency optimization</h3>
+            <p>Finds bloated or duplicate dependencies, suggests lighter alternatives, and validates that nothing breaks before proposing the swap.</p>
+            <div class="opt-meta">
+              <span class="tag tag-yellow">Medium risk</span>
+              <span class="tag tag-blue">Measured improvement</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Daily cost reduction -->
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Cost reduction that compounds daily</h2>
+      <p class="section-sub">OptiBot doesn't optimize once and walk away. It runs every day, across every repo, finding the next thing to cut.</p>
+      <div class="cost-grid">
+        <div class="cost-card">
+          <div class="cost-header">
+            <span class="cost-day">Day 1</span>
+          </div>
+          <p>Adds dependency caching to your main CI workflow. Build time drops 18%. Compute minutes saved immediately.</p>
+        </div>
+        <div class="cost-arrow">&#8594;</div>
+        <div class="cost-card">
+          <div class="cost-header">
+            <span class="cost-day">Day 2</span>
+          </div>
+          <p>Detects redundant CI runs on docs changes. Adds path filters. Eliminates 30% of unnecessary workflow triggers.</p>
+        </div>
+        <div class="cost-arrow">&#8594;</div>
+        <div class="cost-card">
+          <div class="cost-header">
+            <span class="cost-day">Day 3</span>
+          </div>
+          <p>Finds an outdated bundler version. Proposes a verified upgrade. Local builds and CI both get faster.</p>
+        </div>
+        <div class="cost-arrow">&#8594;</div>
+        <div class="cost-card cost-card-repeat">
+          <div class="cost-header">
+            <span class="cost-day">Day 4, 5, 6&hellip;</span>
+          </div>
+          <p>It keeps going. New inefficiencies appear as code evolves. OptiBot catches them before they accumulate.</p>
+        </div>
+      </div>
+      <div class="cost-bottom">
+        <p class="cost-stat">1 repo or 1,000 &mdash; OptiBot scales with you. Small savings compound into real money over weeks and months.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Example PR -->
+  <section class="section section-dark">
+    <div class="container">
+      <h2 class="section-title">Every PR tells the full story</h2>
+      <p class="section-sub">No black boxes. Every OptiBot PR explains what was found, what changed, and what was measured.</p>
+      <div class="pr-preview">
+        <div class="pr-header">
+          <span class="pr-icon">&#9899;</span>
+          <span class="pr-title">Optimize npm dependency cache in CI</span>
+          <span class="pr-label">optibot</span>
+        </div>
+        <div class="pr-body">
+          <div class="pr-section">
+            <strong>Detected issue</strong>
+            <p>Dependency install step (<code>npm ci</code>) takes 32% of total workflow runtime with no cache configured.</p>
+          </div>
+          <div class="pr-section">
+            <strong>Change applied</strong>
+            <p>Added <code>actions/cache</code> step with lockfile-based cache key before dependency installation.</p>
+          </div>
+          <div class="pr-section">
+            <strong>Validation</strong>
+            <p>Ran candidate pipeline 3 times. Compared median against 15 baseline runs on main branch.</p>
+          </div>
+          <div class="pr-section result">
+            <strong>Result</strong>
+            <p>Pipeline runtime improved by <span class="highlight">17.8%</span>. No new failures observed.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Install CTA -->
+  <section id="install" class="section section-cta">
+    <div class="container">
+      <h2>Faster builds. Lower costs. Every day.</h2>
+      <p>Install OptiBot on your GitHub repos. It scans daily, finds optimizations across CI, build tools, and dependencies &mdash; and only opens PRs when it can prove the improvement.</p>
+      <a href="https://github.com/apps/optibot" class="btn btn-lg btn-white">
+        <svg class="gh-icon" viewBox="0 0 16 16" width="20" height="20" fill="currentColor">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+        </svg>
+        Install on GitHub
+      </a>
+      <p class="cta-note">Works with GitHub Actions. Free for open-source repositories.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <span class="footer-logo"><span class="logo-icon">&#9889;</span> OptiBot</span>
+      <span class="footer-copy">Continuous repository optimization, verified before every PR.</span>
+    </div>
+  </footer>
+
+</body>
+</html>
